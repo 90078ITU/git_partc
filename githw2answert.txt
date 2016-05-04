@@ -1,0 +1,27 @@
+git remote add origin "https://github.com/90078ITU/git_partc.git"
+
+➜  git_partc git:(master) ✗ git remote -v
+origin	https://github.com/90078ITU/git_partc.git (fetch)
+origin	https://github.com/90078ITU/git_partc.git (push)
+
+➜  git_partc git:(master) git fetch origin master
+
+It just fetched new changes but didn’t merge them
+
+➜  git_partc git:(master) git merge origin/master
+
+➜  git_partc git:(master) git branch -r
+  origin/master
+  origin/newBranch
+
+➜  git_partc git:(master) git checkout -b newBranch origin/newBranch
+Branch newBranch set up to track remote branch newBranch from origin.
+Switched to a new branch 'newBranch'
+
+Bare repos are basically for sharing between developers. That way no one will edit the files directly. Instead developers will clone the repo, make changes and push it back to shared bare repo.
+
+
+Git pull does a fetch and merge automatically. But if you want to review the code or don't want to retrieve all the code from repo than you should use fetch so you can decide which changes to merge.
+
+git push origin newBranch
+
